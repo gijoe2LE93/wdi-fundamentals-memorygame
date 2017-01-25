@@ -10,5 +10,6 @@ if (cardOne === cardTwo || cardThree === cardFour)
 
 else {
 	alert ("Sorry, try again");
-} 
+}
+
 	
