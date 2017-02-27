@@ -51,17 +51,24 @@ var gameBoard = document.getElementById('game-board');
 	}
 };
 
-
 // Create a function called isMatch to test if two cards in play are a match.
 
 function isMatch() {
 	if (cardsInPlay[0] === cardsInPlay[1]) 
 	{
 		alert ("You have a match!");
+
 	} else {
 		alert ("You don't have a match");
+gameReset();
 	}
 };
+
+// Create a function to reset the cards after a choice
+// function gameReset() {
+// 	cardsInPlay[0];
+// 	createCards();
+// };
 // Create a function called isTwoCards to check if two cards are in play.
 
 function isTwoCards(){
@@ -75,9 +82,11 @@ function isTwoCards(){
 // Set the cardElement's inner HTML to an image of either a king or a queen
 if (this.getAttribute('data-card') === 'king') {
 	this.innerHTML = '<img src="King.png" alt="King"/>';
-} else{
+} else
+{
 	this.innerHTML = '<img src="Queen.png" alt="Queen"/>';
 }
+
 // if you have two cards in play, check for a match
   	if (cardsInPlay.length === 2) {
 
@@ -85,8 +94,9 @@ if (this.getAttribute('data-card') === 'king') {
     isMatch(cardsInPlay);
 
 // clear cards in play array for your next try
-    cardsInPlay= [];
-
+    cardsInPlay = []
+   var gameReset = document.getElementByClassName('card');
+gameReset = cardElement;
   }
 	
 }
